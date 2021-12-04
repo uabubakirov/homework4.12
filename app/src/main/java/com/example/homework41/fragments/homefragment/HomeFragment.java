@@ -36,7 +36,6 @@ public class HomeFragment extends Fragment {
         binding.btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.btnAdd.setVisibility(View.GONE);
                 model.addCars();
             }
         });
@@ -51,7 +50,6 @@ public class HomeFragment extends Fragment {
             model.select(car);
             NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
             navController.navigate(R.id.detailFragment);
-            Log.e("tag", "delete");
         });
     }
 
@@ -60,6 +58,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onChanged(ArrayList<Car> cars) {
                 adapter.addCars(cars);
+                binding.btnAdd.setVisibility(View.GONE);
             }
         });
 

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class HomeViewModel extends ViewModel {
 
+
     public MutableLiveData<ArrayList<Car>> cars = new MutableLiveData<>();
     ArrayList<Car> list = new ArrayList<>();
     public MutableLiveData<Car> selectModel = new MutableLiveData<>();

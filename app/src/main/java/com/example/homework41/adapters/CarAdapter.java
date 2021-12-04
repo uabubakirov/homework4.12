@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import static android.widget.AdapterView.*;
 
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
-    ArrayList<Car> list = new ArrayList<>();
+   public ArrayList<Car> list = new ArrayList<>();
     OnItemClickListener onItemClickListener;
 
     public void addCars(ArrayList<Car> car ){
