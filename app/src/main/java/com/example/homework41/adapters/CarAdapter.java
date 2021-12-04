@@ -7,6 +7,8 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homework41.databinding.CarItemsBinding;
@@ -20,7 +22,6 @@ import static android.widget.AdapterView.*;
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
     ArrayList<Car> list = new ArrayList<>();
     OnItemClickListener onItemClickListener;
-
 
     public void addCars(ArrayList<Car> car ){
         list = car;
